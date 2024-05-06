@@ -139,6 +139,8 @@ const createFunFact = async (req,res)=>{
                 funfacts: req.body.funfacts
             });
         }
+        await merge();
+
         // Get the updated state document from the database
         const result = await State.findOne({state: code}).exec();
 
