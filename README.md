@@ -1,5 +1,8 @@
 ## Final Project: Rest API for US states with data from JSON file and mangoDB
 
+### Web API
+- The API is hosted on Heroku at the following URL: https://nebulous-cypress-zinc.glitch.me/
+
 ### Description
 This project is a REST API that provides information about US states. The data is stored in a JSON file and in a MongoDB database. The API provides the following endpoints:
 #### GET requests
