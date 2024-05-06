@@ -147,9 +147,6 @@ const createFunFact = async (req,res)=>{
         // Return the updated state document
         res.status(201).json(result);
     } catch (err) {console.error(err);}   
-    
-    // Rebuild the states data to include the new fun facts
-    await merge();
 }
 
 // Handler function to update a fun fact of a specific state
