@@ -20,9 +20,11 @@ const logEvents = async (message) => {
     }
 }
 
+// Middleware function to log request information
 const logger = (req, res, next) => {
-    logEvents(`${req.method} ${req.headers.origin} ${req.url}\n`, "reqLog.txt");
-    console.log (`${req.method} ${req.path}`);
+    const logMessage = `${req.method} ${req.headers.origin} ${req.url} Query: ${JSON.stringify(req.query)} Body: ${JSON.stringify(req.body)}\n`;
+    logEvents(logMessage, "reqLog.txt");
+    console.log(logMessage);
     next();
 };
 
